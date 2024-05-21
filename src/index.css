@@ -20,14 +20,24 @@ body {
 }
 
 .header-content {
-  @apply relative px-4 py-2 text-sm sm:text-lg md:text-lg xl:text-2xl font-semibold after:lg:absolute after:lg:bottom-0 after:lg:left-0 after:lg:h-0.5 after:lg:w-0 hover:after:lg:w-full after:lg:transition-all after:lg:ease-in-out after:lg:duration-300 cursor-pointer; 
+  @apply relative px-4 py-2 text-lg md:text-xl xl:text-3xl hover:text-pink-400 hover:scale-75 font-semibold cursor-pointer; 
 }
 
 .single-photo-biggest{
   @apply w-[60%] h-[30vh] sm:h-[40vh] md:h-[60vh] xl:h-[70vh] mx-auto border-white border-8 bg-cover bg-center bg-no-repeat cursor-pointer; 
 }
 
+.wrapped-photo-section img {
+  transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+}
 
+.button-about-contact {
+  @apply flex flex-row justify-center items-center gap-2 border-2 hover:bg-slate-200 cursor-pointer shadow-sm rounded-xl font-semibold;
+}
+
+.description-me{
+  @apply font-bold text-xl text-blue-500 group-hover:text-white;
+}
 /* 
 .heart {
   position: relative;

@@ -2,6 +2,7 @@ import Header from './components/Header'
 import Body from './components/Body'
 import Footer from './components/Footer'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import AboutMe from './components/AboutMe'
 function App() {
 
   return (
@@ -10,7 +11,7 @@ function App() {
       <Header />
         <Routes>
           <Route path="/" element={<Body />} />
-          {/* <Route path="/https://www.facebook.com/luuvu2003/" element={<Body />} /> */}
+          <Route path="/about" element={<AboutMe />} />
         </Routes>
       <Footer />
       </BrowserRouter>
