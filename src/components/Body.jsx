@@ -58,7 +58,7 @@ function Body() {
           <div
             onClick={handleClickBiggestPhoto}
             id="biggest-image"
-            className="single-photo-biggest hover:border-none hover:scale-105 hover:ease-in-out hover:duration-300 bg-[url('./images/2U3A8579.JPG')]"
+            className="single-photo-biggest hover:border-none hover:scale-105 hover:ease-in-out hover:duration-300 bg-[url('public/images/2U3A8579.JPG')]"
           ></div>
           <div
             id="modal-biggest"
@@ -68,7 +68,7 @@ function Body() {
           >
             <img
               id="modal-image-biggest"
-              src="./images/2U3A8579.JPG"
+              src="public/images/2U3A8579.JPG"
               alt="Image"
               className="max-w-full max-h-full shadow shadow-red-50"
             />
@@ -83,7 +83,7 @@ function Body() {
                     src={`./images/${photo.name}`}
                     onClick={() => handleClickSmallerPhoto(photo)}
                     alt="Image"
-                    className="hover:border-none cursor-pointer bg-cover bg-center bg-no-repeat hover:scale-105 hover:ease-in-out hover:duration-300"
+                    className="hover:border-none cursor-pointer bg-cover bg-center bg-no-repeat hover:scale-110 md:hover:scale-105 hover:ease-in-out hover:duration-300"
                   />
               </div>
             ))}
