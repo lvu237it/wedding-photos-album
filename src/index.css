@@ -24,7 +24,7 @@ body {
 }
 
 .single-photo-biggest{
-  @apply w-[60%] h-[30vh] sm:h-[40vh] md:h-[60vh] xl:h-[70vh] mx-auto border-white border-8 bg-cover bg-center bg-no-repeat cursor-pointer; 
+  @apply mx-auto border-white border-8 cursor-pointer; 
 }
 
 .wrapped-photo-section img {

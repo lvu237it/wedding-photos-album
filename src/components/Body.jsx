@@ -55,11 +55,12 @@ function Body() {
     <>
       <div className="content-wrapper-section w-[95%] mx-auto mb-10">
         <section className="impressive-photo-section text-center mb-16">
-          <div
+          <img
             onClick={handleClickBiggestPhoto}
             id="biggest-image"
-            className="single-photo-biggest hover:border-none hover:scale-105 hover:ease-in-out hover:duration-300 bg-[url('public/images/2U3A8579.JPG')]"
-          ></div>
+            src="./images/2U3A8579.JPG"
+            className="single-photo-biggest w-[60%] h-full hover:border-none hover:scale-105 hover:ease-in-out hover:duration-300]"
+          />
           <div
             id="modal-biggest"
             style={{ display: modalBiggestPhoto ? "flex" : "none" }}
@@ -68,7 +69,7 @@ function Body() {
           >
             <img
               id="modal-image-biggest"
-              src="public/images/2U3A8579.JPG"
+              src="./images/2U3A8579.JPG"
               alt="Image"
               className="max-w-full max-h-full shadow shadow-red-50"
             />
