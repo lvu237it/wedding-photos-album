@@ -29,4 +29,4 @@ jobs:
       with:
         args: deploy
       env:
-        FIREBASE_TOKEN: ${{ WEDDING_PHOTOS_ALBUM_ACTIONS_SECRETS }}
+        FIREBASE_TOKEN: ${{ secrets.WEDDING_PHOTOS_ALBUM_ACTIONS_SECRETS }}
