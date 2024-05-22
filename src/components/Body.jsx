@@ -136,7 +136,7 @@ function Body() {
         </div>
       )}
       <div className="container w-[95%] mx-auto mb-3">
-        <div className="text-3xl text-gray-700 mb-4 font-bold text-center hover:text-pink-400">
+        <div className="text-3xl px-2 md:px-auto text-gray-700 mb-4 font-bold text-center hover:text-pink-400">
           Chúc Khanh và Thương sẽ hạnh phúc bên nhau tới trọn đời!
           <div className="inline-block">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 flex justify-center items-center">
