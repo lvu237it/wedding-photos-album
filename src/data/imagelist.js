@@ -21,7 +21,7 @@ const imagelist = [
   },
   {
     id: 6,
-    name: "2U3A8579.JPG",
+    name: "2U3A8895.JPG",
   },
   {
     id: 7,
@@ -37,42 +37,38 @@ const imagelist = [
   },
   {
     id: 10,
-    name: "2U3A8864.JPG",
-  },
-  {
-    id: 11,
-    name: "2U3A8895.JPG",
-  },
-  {
-    id: 12,
-    name: "2U3A8914.JPG",
-  },
-  {
-    id: 13,
-    name: "2U3A8934.JPG",
-  },
-  {
-    id: 14,
     name: "2U3A8973.JPG",
   },
   {
-    id: 15,
+    id: 11,
+    name: "2U3A8864.JPG",
+  },
+  {
+    id: 12,
+    name: "2U3A8934.JPG",
+  },
+  {
+    id: 13,
+    name: "2U3A8914.JPG",
+  },
+  {
+    id: 14,
     name: "2U3A9058.JPG",
   },
   {
-    id: 16,
+    id: 15,
     name: "2U3A9197.JPG",
   },
   {
-    id: 17,
+    id: 16,
     name: "2U3A9272.JPG",
   },
   {
-    id: 18,
+    id: 17,
     name: "2U3A9275.JPG",
   },
   {
-    id: 19,
+    id: 18,
     name: "2U3A9279.JPG",
   }
 ];
