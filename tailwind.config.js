@@ -28,12 +28,7 @@ export default {
       },
       animation: {
         slideDown: 'slideDown 0.5s ease-in-out',
-        fadeIn: 'fadeIn 0.5s ease-in-out',
-        scale: {
-          '0%': { transform: 'scale(1)' },
-          '50%': { transform: 'scale(1.2)' },
-          '100%': { transform: 'scale(1)' },
-        }
+        fadeIn: 'fadeIn 0.5s ease-in-out'
       },
     },
   },

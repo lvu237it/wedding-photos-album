@@ -92,7 +92,7 @@ function Body() {
   return (
     <>
       <div className="content-wrapper-section w-[95%] mx-auto mb-10">
-        <section className="impressive-photo-section text-center mb-16">
+        <section className="impressive-photo-section text-center mb-16 animate-fadeIn">
           <img
             onClick={handleClickBiggestPhoto}
             id="biggest-image"
@@ -114,7 +114,7 @@ function Body() {
           </div>
         </section>
         <section className="wrapped-photo-section">
-          <div className="flex flex-wrap gap-3 lg:gap-4">
+          <div className="grid grid-cols-1 mmd:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-6 lg:gap-4">
             {photosList.map((photo) => (
               <div key={photo.id} id={`wrapped-photo-id-${photo.id}`} className="basis-1/3 gap-4 max-w-screen-sm my-auto w-[80%] lg:w-[70%] wrapped-photo-item mx-auto bg-white border-white border-[10px] md:border-8">
                   <img
