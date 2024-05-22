@@ -1,32 +1,42 @@
-name: Deploy to Firebase
-
+name: Build and Deploy
 on:
   push:
     branches:
-      - main # Chạy workflow khi có đẩy mã lên nhánh main
+      - main
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v3
+      - name: Checkout Repo
+        uses: actions/checkout@main
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm run build-prod
+      - name: Archive Production Artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: dist
+          path: dist
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@main
+      - name: Download Artifact
+        uses: actions/download-artifact@main
+        with:
+          name: dist
+          path: dist
+      - name: GitHub Action for Firebase
+        uses: w9jds/firebase-action@v13.10.0
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.WEDDING_PHOTOS_ALBUM_ACTIONS_SECRETS }}
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20' # hoặc phiên bản node phù hợp với dự án của bạn
 
-    - name: Install Dependencies
-      run: npm install
-
-    - name: Build Project
-      run: npm run build
-
-    - name: GitHub Action for Firebase
-      uses: w9jds/firebase-action@v13.10.0
-      with:
-        args: deploy
-      env:
-        FIREBASE_TOKEN: ${{ secrets.WEDDING_PHOTOS_ALBUM_ACTIONS_SECRETS }}
