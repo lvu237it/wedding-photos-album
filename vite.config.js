@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['./firebase-config.js']
+      external: ['/firebase-config.js']
     }
   }
 });
