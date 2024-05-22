@@ -6,7 +6,7 @@ The completed version has been deployed at https://wedding-photos-album.web.app/
 
 * **nodejs (>= v20.10.0)**
 * **npm (>= v10.3.0) or yarn (>= v1.22.22)**
-* **nodemodules**
+* **node modules** (Terminal: npm i/install)
 
 ## Clone project and run test.
 

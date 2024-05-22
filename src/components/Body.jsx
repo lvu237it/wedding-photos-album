@@ -4,6 +4,7 @@ import imagelist from "../data/imagelist";
 function Body() {
   const [modalBiggestPhoto, setModalBiggestPhoto] = useState(false);//modal hiển thị ảnh section 1 - biggest photo
   const [modalSmallerPhoto, setModalSmallerPhoto] = useState(null);//modal hiển thị ảnh section 2 - smaller photos
+  const [columnGrid, setColumnGrid] = useState(3);
   const photosList = imagelist;
 
   const handleKeyDownESC = (event) => {
@@ -50,7 +51,45 @@ function Body() {
     };
   }, [modalBiggestPhoto]);
   
+  // useEffect(() => {
+  //   const updateColumns = () => {
+  //     setColumnGrid(window.innerWidth >= 576 ? 3 : 2);
+  //   };
 
+  //   // Cập nhật số cột ngay lập tức khi component mount
+  //   updateColumns();
+
+  //   const gridContainer = document.querySelector('.grid-container');
+  //   const gridItems = gridContainer.querySelectorAll('.grid-item');
+
+  //   const columns = columnGrid;
+  //   const remainder = gridItems.length % columns;//ví dụ có 19 items - 3 column => remainder = 1 (dư 1 => chỉ có 1 element ở hàng cuối thay vì 3 element mới đủ 1 hàng)
+
+  //   // Xóa các phần tử trống cũ (nếu có)
+  //   document.querySelectorAll('.grid-item.invisible').forEach(el => el.remove());
+
+  //   if (remainder !== 0) {
+  //     const emptySlots = columns - remainder;//lấy số lượng cột hiện tại trừ số phần tử hiện có trên hàng cuối => số lượng phần tử cần thêm vào để đủ hàng
+  //     for (let i = 0; i < emptySlots; i++) {//tạo các thẻ trống để thêm vào hàng cuối cùng
+  //       const emptyDiv = document.createElement('div');
+  //       emptyDiv.classList.add('grid-item', 'invisible');
+  //       gridContainer.appendChild(emptyDiv); //nối các thẻ trống vừa tạo, vào phần cuối của grid hiện tại
+  //     }
+  //   }
+
+
+  //   // Thêm event listener khi window resize
+  //   window.addEventListener('resize', updateColumns);
+
+  //   // Cleanup event listener khi component unmount
+  //   return () => {
+  //     window.removeEventListener('resize', updateColumns);
+  //   };
+  // }, [columnGrid]); // Chỉ chạy một lần khi component mount
+
+
+  
+    
   return (
     <>
       <div className="content-wrapper-section w-[95%] mx-auto mb-10">
@@ -59,7 +98,7 @@ function Body() {
             onClick={handleClickBiggestPhoto}
             id="biggest-image"
             src="./images/2U3A8579.JPG"
-            className="single-photo-biggest w-[60%] h-full hover:border-none hover:scale-105 hover:ease-in-out hover:duration-300]"
+            className="single-photo-biggest w-[80%] md:w-[60%] h-full hover:border-none hover:scale-105 hover:ease-in-out hover:duration-300]"
           />
           <div
             id="modal-biggest"
@@ -76,9 +115,9 @@ function Body() {
           </div>
         </section>
         <section className="wrapped-photo-section">
-          <div className="flex flex-wrap md:flex-row justify-center items-center gap-4">
+          <div className="flex flex-wrap gap-3 lg:gap-4">
             {photosList.map((photo) => (
-              <div key={photo.id} id={`wrapped-photo-id-${photo.id}`} className="max-w-screen-sm w-[60%] lg:w-[40%] wrapped-photo-item mx-auto bg-white border-white border-8">
+              <div key={photo.id} id={`wrapped-photo-id-${photo.id}`} className="basis-1/3 gap-4 max-w-screen-sm my-auto w-[80%] lg:w-[70%] wrapped-photo-item mx-auto bg-white border-white border-8">
                   <img
                     id={photo.id}
                     src={`./images/${photo.name}`}
@@ -116,7 +155,6 @@ function Body() {
         </div>
         <hr className="border-1 border-slate-400"/>
       </div>
-      
     </>
   );
 }
