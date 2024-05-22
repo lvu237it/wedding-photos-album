@@ -4,7 +4,6 @@ import imagelist from "../data/imagelist";
 function Body() {
   const [modalBiggestPhoto, setModalBiggestPhoto] = useState(false);//modal hiển thị ảnh section 1 - biggest photo
   const [modalSmallerPhoto, setModalSmallerPhoto] = useState(null);//modal hiển thị ảnh section 2 - smaller photos
-  const [columnGrid, setColumnGrid] = useState(3);
   const photosList = imagelist;
 
   const handleKeyDownESC = (event) => {
@@ -117,13 +116,13 @@ function Body() {
         <section className="wrapped-photo-section">
           <div className="flex flex-wrap gap-3 lg:gap-4">
             {photosList.map((photo) => (
-              <div key={photo.id} id={`wrapped-photo-id-${photo.id}`} className="basis-1/3 gap-4 max-w-screen-sm my-auto w-[80%] lg:w-[70%] wrapped-photo-item mx-auto bg-white border-white border-8">
+              <div key={photo.id} id={`wrapped-photo-id-${photo.id}`} className="basis-1/3 gap-4 max-w-screen-sm my-auto w-[80%] lg:w-[70%] wrapped-photo-item mx-auto bg-white border-white border-[10px] md:border-8">
                   <img
                     id={photo.id}
                     src={`./images/${photo.name}`}
                     onClick={() => handleClickSmallerPhoto(photo)}
                     alt="Image"
-                    className="hover:border-none cursor-pointer bg-cover bg-center bg-no-repeat hover:scale-110 md:hover:scale-105 hover:ease-in-out hover:duration-300"
+                    className="hover:border-none cursor-pointer bg-cover bg-center bg-no-repeat hover:scale-105 mmd:hover:scale-110 hover:ease-in-out hover:duration-300"
                   />
               </div>
             ))}
