@@ -14,6 +14,18 @@ The completed version has been deployed at https://wedding-photos-album.web.app/
 * $ cd <project_dir>
 * $ npm run dev / yarn dev
 
+# Note for Build and Deploy with CI/CD by firebase hosting
+
+* CLI: 
+
+**firebase login** 
+**firebase init** - select "Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys" option, then config by your own option, with CI/CD
+**firebase deploy** - can be used if you want to deploy manually
+
+* Important:
+
+**Config vite.config.js** - to avoid 'Error: [vite]: Rollup failed to resolve import "/firebase-config.js" from "/home/runner/work/.../index.html"'
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
