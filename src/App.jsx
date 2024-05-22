@@ -11,6 +11,7 @@ function App() {
       <Header />
         <Routes>
           <Route path="/" element={<Body />} />
+          
           {/* <Route path="/about" element={<AboutMe />} /> */}
         </Routes>
       <Footer />
