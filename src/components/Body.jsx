@@ -84,7 +84,7 @@ function Body() {
   return (
     <>
       <div className="content-wrapper-section w-[95%] mx-auto mb-10">
-        <section className="impressive-photo-section text-center mb-16 animatecss animatecss-fadeInDown">
+        <section className="impressive-photo-section text-center mb-16">
           <img
             onClick={handleClickBiggestPhoto}
             id="biggest-image"
