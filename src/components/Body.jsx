@@ -84,12 +84,12 @@ function Body() {
   return (
     <>
       <div className="content-wrapper-section w-[95%] mx-auto mb-10">
-        <section className="impressive-photo-section text-center mb-16">
+        <section className="impressive-photo-section text-center mb-16 animatecss animatecss-fadeInDown">
           <img
             onClick={handleClickBiggestPhoto}
             id="biggest-image"
             src="./images/section-1/2U3A8579.JPG"
-            className="single-photo-biggest w-[80%] md:w-[60%] h-full hover:border-none hover:scale-105 hover:ease-in-out hover:duration-300]"
+            className="single-photo-biggest w-[80%] md:w-[60%] h-full bg-cover bg-center bg-no-repeat hover:border-none hover:scale-110 hover:ease-in-out hover:duration-300]"
           />
           <div
             id="modal-biggest"
@@ -114,7 +114,7 @@ function Body() {
                   src={`./images/section-2/${photo.name}`}
                   onClick={() => handleClickSmallerPhoto(photo)}
                   alt="Image"
-                  className="hover:border-none cursor-pointer bg-cover bg-center bg-no-repeat hover:scale-105 mmd:hover:scale-110 hover:ease-in-out hover:duration-300"
+                  className="hover:border-none cursor-pointer bg-cover bg-center bg-no-repeat hover:scale-110 hover:ease-in-out hover:duration-300"
                 />
               </div>
             ))}

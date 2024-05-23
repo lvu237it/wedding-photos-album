@@ -27,9 +27,7 @@ function Footer() {
           <div className="">© <span className="text-xl">2024</span> Luu Vu. All rights reserved.</div>
        </div>
         }
-      
     </div>
-    <div className="mx-auto"></div>
     </>
   )
 }

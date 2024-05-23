@@ -49,7 +49,7 @@ function Header() {
           </nav>
         </header>
         <hr/>
-        <div className="text-center text-xl bg-slate-100 hover:bg-slate-200 rounded-xl mx-8 my-6 px-8 py-4 font-semibold">
+        <div className="animatecss animatecss-fadeInDown text-center text-xl bg-slate-100 hover:bg-slate-200 rounded-xl mx-8 my-6 px-8 py-4 font-semibold">
          Tình yêu là cả một hành trình dài. Chúng ta quyết định đến với nhau đã là hữu duyên. Dù có bao nhiêu chông gai hay thử thách, thì đó cũng là những bài học giúp chúng ta thấu hiểu và thương yêu nhau nhiều hơn. Vì thế, hãy luôn dành cho nhau những điều tuyệt vời nhất nhé!
           <div className="w-[10%] mx-auto my-1">
             <div className="flex justify-center items-center gap-1">

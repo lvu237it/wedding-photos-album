@@ -26,7 +26,7 @@ function AboutMe() {
     <>
       <div className="container w-[95%] mx-auto justify-center">
         <div className="my-6">
-        <div className="text-base w-full h-auto bg-slate-50 rounded-lg shadow-sm">
+        <div className="animatecss animatecss-fadeInDown text-base w-full h-auto bg-slate-50 rounded-lg shadow-sm">
           <div className="information"> {/* information */}
             <div className="flex justify-between p-5 md:px-20 md:py-5">
               {/* image and name */}
@@ -76,13 +76,6 @@ function AboutMe() {
             </div>
             </div>
           </div>
-          {/* <div className="group flex items-center">
-            <img className="shrink-0 h-12 w-12 rounded-full" src="./logo/me.jpg" alt="" />
-            <div className="ltr:ml-3 rtl:mr-3">
-              <p className="text-sm font-medium text-blue-300 group-hover:text-white">vc</p>
-              <p className="text-sm font-medium text-blue-500 group-hover:text-slate-300">qqjz</p>
-            </div>
-          </div> */}
           <hr className="border-1 border-slate-300"/>
           <div className="description w-full px-10 py-3 md:px-40 md:py-5">{/* description */}
             <p className="description-me">Họ và tên: Lưu Văn Vũ</p>
