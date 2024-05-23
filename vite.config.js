@@ -8,8 +8,5 @@ export default defineConfig({
     rollupOptions: {
       external: ['/firebase-config.js']
     }
-  },
-  resolve: {
-    extensions: ['.js', '.jsx']
   }
 });
